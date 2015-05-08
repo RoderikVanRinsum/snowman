@@ -1,7 +1,6 @@
 module StaticPagesHelper
   def calculate_perms word
-    dup = calc_dup word.chars
-    (1..word.length).reduce(&:*) / dup
+    (1..word.length).reduce(&:*) / (calc_dup word.chars)
   end
 
   def calc_dup array
