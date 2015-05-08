@@ -1,0 +1,7 @@
+%h2 Enter your word:
+= form_tag(root_path, method: "get") do
+  = text_field_tag :word, params[:word], class: 'form-control', placeholder: 'Keyword'
+  = submit_tag "Calculate index"
+- if @index
+  %h3 The index of the word '#{@word}' is #{@index}
+
